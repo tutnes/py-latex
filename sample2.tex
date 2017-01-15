@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+%\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
+                                                          % if you need a4paper
+\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+\usepackage{graphicx}                                                          % paper
+\usepackage{wrapfig}
+\usepackage{float}
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+\usepackage[autostyle]{csquotes} 
+
+
+
+\title{\LARGE \bf
+Great Expectations?}
+
+\author{Tarjei Utnes - MA140 Student Westerdals ACT}% <-this % stops a space
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+Companies such as Google, Amazon and Netflix are changing peoples expectations in the digital sphere. Google is searching through the ''whole internet'' in sub seconds. Amazon ships their products within 48 hours. Netflix is never unavailable, even when launching full seasons of TV-series at the same day, all over the world.
+
+Simultaneously, enterprises are digitizing their businesses, and are facing the expectations created by those companies. They are, however, facing this without the same resources, a fact that is largely hidden for most people.
+This means that the software architects acting as mediators and managing expectations, between developers and stakeholders is becoming increasingly important.
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+\subsection{Role of architecture and architects}
+\blockquote{Software architecture represents a common abstraction of a system that most, if not all, of the system’s stakeholders can use as a basis for creating mutual understanding, negotiating, forming consensus, and communicating with each other \cite{c1}.}
+
+The quote above is from the book ''Software Architecture in Practice''\cite{c1}. In the book, it is argued that the aim of a software architecture should be so that the stakeholders can reason about the system. Whether this system is already implemented or not. Also, it should be the enabler for mutual understanding.
+Already in 1968 Melvin Conway \cite{c3} saw links between the organization and the, then system structures being designed.
+
+\subsection{Challenges facing developers today}
+Per the Developer Survey \cite{c6} Fig. \ref{fig:klp}, the biggest challenge facing developers is ''Unrealistic Expectations''.  Second on the list is ''Poor Documentation'' and third is ''Unspecific Requirements''. When reading this, it seems like these software developers are missing a software architect, or that the software architect in place is not doing a good job of \blockquote{creating mutual understanding, negotiating, forming consensus, and communicating with each other\cite{c1}.}
+That more than a third of the respondents reported that they are working with ''Unrealistic expectations'' is troublesome in my view. Contrast this fact with what the 2016 State of DevOps report says about employee satisfaction: \blockquote{Employees in high-performing teams were 2.2 times more likely to recommend their organization as a great place to work\cite{c2}.}
+How I read these reports is like this, If you are in a high performing team, you are probably delivering according to, or maybe above expectations, and you are also a happier employee. Meanwhile more than a third of developers feel they are facing ''Unrealistic Expectations''. 
+
+\subsection{Google fallacy}
+From my own work as a consultant I have run into what I like to call the “Google fallacy” at least once. The fallacy goes something like this: “If Google is able to search through the entire web in under one second, surely our system should be able to do X in less than 4 seconds”.
+
+
+
+
+
+\blockquote{...[S]earching for ''Kirke'', it took nearly 2 minutes to complete. If Google can search through billions of documents in one second, can’t we demand that a search through our databases should be completed in 15 seconds? (Own translation adapted from Fig. \ref{fig:klp})}
+
+
+Fig. \ref{fig:klp} is an example from my work as a consultant. It is a requirement collected by a software architect. While anecdotal, I would claim that this is a general view, and that people are getting used to the speed of Google. That there are huge technical differences between the typical RDBMS lookup and the information retrieval from a Google search, is largely hidden for most users and many of them might not care either.
+The Google fallacy, I would argue, concerns the software architecture quality attribute Performance.
+At the same time the stakeholders might have their similar experiences surrounding Availability, Interoperability, Modifiability, Security, Testability, Usability and other quality attributes of the system \cite{c1}.
+
+\section{Discussion}
+While companies such as Google, Netflix and Amazon are sharing many of their experiences through blogs\cite{netflix}, open sourcing software\cite{github-google} and making services available\cite{amazon}, they are the same time raising or setting the bar with people’s expectations surround software architectures quality attributes.
+The reality of many software teams, however, is not that of being able to create the software architectures with the same quality attributes as these companies can. At least not if you take what the Stack Overflow developer report \cite{c6} is saying to heart.
+One could also argue the point that aiming high, but not hitting all the targets will increase the quality of the product.
+Either having a software architect translating the requirements to and from the users, and the other stakeholders, but also making clear that prioritizing one or more of the quality attributes \cite{c1} means that you basically down prioritize the other. 
+
+\section{Conclusion}
+While it is great to have big expectations, and being able to live up to those expectations it seems like software projects, and therefore software architects need to manage expectations better. This can and should be done by the software architect, if there is indeed such a role. If there is no software architect I think that this should be the priority. 
+In addition to this educating other disciplines than Computer Sciences and IT in the importance of architects could be one way of pushing this agenda.
+I believe that this would benefit organizations, because digitization being a mega-trend \cite{c4}, developers will probably meet more of these expectations in the future.
+\begin{thebibliography}{99}
+
+\bibitem{c1} Bass, L., Clements, P. and Kazman, R. (2013). Software Architecture in Practice Third Edition. Addison-Wesley Professional.
+\bibitem{c2}Brown, Alanna et al State of DevOps (2016)
+\bibitem{c3}Conway, M. E. (1968). How do committees invent. Datamation, 14(4), 28–31.
+\bibitem{c4}Ernst \& Young. (2015). Megatrends 2015: Making Sense of a World in Motion. EY.com, 1–54. Retrieved from http://www.ey.dk/Publication/vwLUAssets/ey-megatrends-report-2015/\$FILE/ey-megatrends-report-2015.pdf
+\bibitem{c5}KLP Responstid TIA.xls. (2015). (Qualitative data gathered as a consultant)
+\bibitem{c6}Stack Overflow. (2016). "Stack Overflow Developer Survey 2016 Results" (Accessed December 1.) http://stackoverflow.com/research/developer-survey-2016
+\bibitem{netflix} The Netflix Tech Blog. (n.d.). (Accessed Dec. 1. 2016) http://techblog.netflix.com/
+\bibitem{github-google} GitHub.com Google (Accessed Dec. 2. 2016) https://github.com/google
+\bibitem{amazon} Amazon Web Services (AWS) - Cloud Computing Services. (n.d.). (Accessed Dec. 2. 2016) https://aws.amazon.com/
+
+\end{thebibliography}
+
+\addtolength{\textheight}{-12cm}
+\onecolumn
+\section{APPENDIX}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\textwidth]{klp01.png}
+  \caption{Screen shot from architecture requirement.}
+  \label{fig:klp}
+\end{figure}
+\begin{figure}
+  \centering
+    \includegraphics[width=\textwidth]{stackoverflow01.png}
+  \caption{Screen shot Stack Overflow 2016 Developer report.}
+  \label{fig:so}
+\end{figure}
+\newpage
+\twocolumn
+
+
+
+
+\end{document}
